@@ -25,29 +25,21 @@ function init() {
   });
 
   document.getElementById("volume-controls").addEventListener("change", (event) => {
-      console.log(event.target.value);
-      console.log(document.getElementById("volume-controls").querySelector("img"));
-      console.log(document.querySelector("audio").volume);
-
       if (event.target.value == 0) {
         document.getElementById("volume-controls").querySelector("img").src = "assets/icons/volume-level-0.svg";
         document.querySelector("audio").volume = event.target.value/100;
-        console.log(document.querySelector("audio").volume);
       }
       else if (event.target.value > 0 && event.target.value < 33) {
         document.getElementById("volume-controls").querySelector("img").src = "assets/icons/volume-level-1.svg";
         document.querySelector("audio").volume = (event.target.value/100);
-        console.log(document.querySelector("audio").volume);
       }
       else if (event.target.value >= 33 && event.target.value < 67) {
         document.getElementById("volume-controls").querySelector("img").src = "assets/icons/volume-level-2.svg";
         document.querySelector("audio").volume = (event.target.value/100);
-        console.log(document.querySelector("audio").volume);
       }
       else {
         document.getElementById("volume-controls").querySelector("img").src = "assets/icons/volume-level-3.svg";
         document.querySelector("audio").volume = (event.target.value/100);
-        console.log(document.querySelector("audio").volume);
       }
 
   });
